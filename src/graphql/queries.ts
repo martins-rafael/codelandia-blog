@@ -1,25 +1,28 @@
 import { gql } from 'graphql-request';
 
 export const GET_POSTS = gql`
-  query getPosts {
-  posts {
+  query getPosts($first: Int) {
+  posts(first: $first, orderBy: createdAt_DESC) {
     id,
     heading,
     slug,
+    createdAt,
     body {
-      html
+      text
     }
   }
 }
 `;
 
 export const GET_POST_BY_SLUG = gql`
-  query getPostsBySlug($slug: String!) {
-  posts(where: {slug: $slug}) {
+  query getPostBySlug($slug: String!) {
+  post(where: {slug: $slug}) {
     id,
     heading,
     slug,
+    createdAt,
     body {
+      text,
       html
     }
   }

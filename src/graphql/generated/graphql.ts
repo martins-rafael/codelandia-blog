@@ -2213,14 +2213,16 @@ export enum _SystemDateTimeFieldVariation {
   Combined = 'combined'
 }
 
-export type GetPostsQueryVariables = Exact<{ [key: string]: never; }>;
+export type GetPostsQueryVariables = Exact<{
+  first?: Maybe<Scalars['Int']>;
+}>;
 
 
-export type GetPostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', id: string, heading: string, slug: string, body: { __typename?: 'RichText', html: string } }> };
+export type GetPostsQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', id: string, heading: string, slug: string, createdAt: any, body: { __typename?: 'RichText', text: string } }> };
 
-export type GetPostsBySlugQueryVariables = Exact<{
+export type GetPostBySlugQueryVariables = Exact<{
   slug: Scalars['String'];
 }>;
 
 
-export type GetPostsBySlugQuery = { __typename?: 'Query', posts: Array<{ __typename?: 'Post', id: string, heading: string, slug: string, body: { __typename?: 'RichText', html: string } }> };
+export type GetPostBySlugQuery = { __typename?: 'Query', post?: Maybe<{ __typename?: 'Post', id: string, heading: string, slug: string, createdAt: any, body: { __typename?: 'RichText', text: string, html: string } }> };
