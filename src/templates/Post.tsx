@@ -1,5 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/dist/client/router';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { Header } from 'components/Header';
 import { PostData } from 'types/post';
@@ -14,6 +17,10 @@ export const PostTemplate = ({ post }: PostTemplateProps) => {
   const { heading, createdAt, body } = post;
   const date = formatDate(createdAt);
   const paragraphsWithClass = body.html.replace(/<p>/g, '<p class="my-5">');
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <div className="flex flex-col items-center justify-center bg-[#F3F5F7]">
