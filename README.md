@@ -1,29 +1,59 @@
-# Next.js + Tailwind CSS Example
+# Codelândia Blog
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+<p>
+  <img src="https://img.shields.io/badge/made%20by-RAFAEL%20MARTINS-EF4444?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/martins-rafael/codelandia-blog?color=EF4444&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/martins-rafael/codelandia-blog?color=EF4444&style=flat-square">
+  <a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-EF4444?style=flat-square">
+  </a>
+  
+</p>
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
-## Preview
+## Tópicos 
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+[Sobre o Desafio](#sobre-o-desafio)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+[Tecnologias](#tecnologias)
 
-## Deploy your own
+[Licença](#licença)
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+<br>
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+## Sobre o Desafio
 
-## How to use
+Desafio #1 da comunidade Codelândia, by [Iuri Silva](https://github.com/iuricode).
+O desafio consiste em construir um blog de acordo com o layout disponibilizado.
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+<br>
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+<p align="center">
+  <img src=".github/mockup.png" alt="Página inicial">
+</p>
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Tecnologias
+
+As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [GraphQL](https://graphql.org/)
+- [graphql-request](https://github.com/prisma-labs/graphql-request)
+- [GraphQL code generator](https://www.graphql-code-generator.com/)
+
+<br>
+
+## Licença
+<a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/badge/license-MIT-EF4444?style=flat-square">
+</a>
+
+<br>
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
+
+---
+
+Feito com :heart: by [Rafael Martins](https://github.com/martins-rafael)
