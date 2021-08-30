@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import { ChangeEvent, useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { Header } from 'components/Header';
 import { PostData } from 'types/post';
@@ -46,6 +48,17 @@ export const HomeTemplate = ({ posts }: HomeTemplateProps) => {
     return postsArr;
   });
 
+  useEffect(() => {
+    localStorage.setItem(
+      '@CodelandiaBlog:favorites',
+      JSON.stringify(favorites)
+    );
+  }, [favorites]);
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const filteredPosts = searchValue
     ? postsWithFavorites.filter(post => {
       return post.heading.toLowerCase().includes(
@@ -53,13 +66,6 @@ export const HomeTemplate = ({ posts }: HomeTemplateProps) => {
       );
     })
     : postsWithFavorites;
-
-  useEffect(() => {
-    localStorage.setItem(
-      '@CodelandiaBlog:favorites',
-      JSON.stringify(favorites)
-    );
-  }, [favorites]);
 
   const handleFavorite = (id: string) => {
     const updatedPosts = postsWithFavorites.map(post => {

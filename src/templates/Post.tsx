@@ -24,7 +24,11 @@ export const PostTemplate = ({ post }: PostTemplateProps) => {
 
       <Header shouldExcludeSearch />
 
-      <main className="pb-24 px-5" style={{ marginTop: "-100px" }}>
+      <main
+        data-aos="fade-right"
+        className="pb-24 px-5"
+        style={{ marginTop: "-100px" }}
+      >
         <div className="w-full max-w-4xl bg-white p-5 rounded-md drop-shadow-sm">
           <header className="flex justify-between">
             <button

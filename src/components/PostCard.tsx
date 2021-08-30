@@ -13,7 +13,10 @@ const PostCard = ({ post, onClick }: PostCardProps) => {
   const introduction = `${body.text.split('.')[0]}.`;
 
   return (
-    <div className="mb-12 w-full max-w-4xl bg-white p-5 rounded-md drop-shadow-sm">
+    <div
+      className="mb-12 w-full max-w-4xl bg-white p-5 rounded-md drop-shadow-sm"
+      data-aos="fade-right"
+    >
       <header className="flex justify-between">
         <span className="text-[#B6B6B6]">{date}</span>
 
